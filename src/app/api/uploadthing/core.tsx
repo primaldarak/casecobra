@@ -40,7 +40,7 @@ export const ourFileRouter = {
           },
         });
 
-        return { configId };
+        return { configId: updatedConfiguration.id };
       }
     }),
 } satisfies FileRouter;
