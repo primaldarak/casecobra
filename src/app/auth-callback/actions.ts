@@ -14,4 +14,14 @@ export const getAuthStatus = async () => {
   const existingUser = await db.user.findFirst({
     where: { id: user.id },
   });
+
+  if (!existingUser) {
+    await db.user.create({
+      data: {
+        id: user.id,
+        email: user.email,
+      },
+    });
+  }
+  return { success: true };
 };
