@@ -77,7 +77,7 @@ model Order {
   billingAddress   BillingAddress? @relation(fields: [billingAddressId], references: [id])
   billingAddressId String?
 
-  cretedAt  DateTime @default(now())
+  createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
 
